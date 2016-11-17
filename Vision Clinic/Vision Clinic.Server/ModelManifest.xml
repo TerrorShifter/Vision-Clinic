@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Documents>
+    <Document FullPath="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.Server\DataSources\ApplicationData\Appointments.lsml" Checksum="01955A7E444D9101474FBD2FDCE6CFD608F01063B1169A1903CF68CB2C4D4D6E" />
+    <Document FullPath="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.Server\DataSources\ApplicationData\InvoiceDetails.lsml" Checksum="BDF4A66248B0B09D5E3349BAFD61C803BE65B19F713A65FED98AD2CA41E97AB7" />
+    <Document FullPath="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.Server\DataSources\ApplicationData\Invoices.lsml" Checksum="07FA2D944421A43EF7215D645435E1E87FDBB8A89676A6BFCF1059D311834C05" />
+    <Document FullPath="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.Server\DataSources\ApplicationData\Patients.lsml" Checksum="08D1C856070AD4CFB48CAB434CB277DB85E45EB01B3973D1A77430BB06996263" />
+    <Document FullPath="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.Server\DataSources\PrescriptionContoso\ProductRebates.lsml" Checksum="A6913E2C59F1990C9EC1725850BE1B11E2B7FA212F626F3FD93B38317D1946CE" />
+    <Document FullPath="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.Server\DataSources\PrescriptionContoso\Products.lsml" Checksum="0C87763A716F221713BD23A3DD39C2EE5744237273FA7537AD30D85C96A5FDEC" />
+    <Document FullPath="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.Server\DataSources\PrescriptionContoso\RelatedProducts.lsml" Checksum="D88404B52A803D96BE62DE70B6E6ED691BD5C4B635590CD1054E4B87085FF6A8" />
+    <Document FullPath="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.Server\Properties\DataSources\ApplicationData.lsml" Checksum="E6FEEAC3B4A850AAC5F0029259A0B9F8C1BD45F2950D17BD8D6664B9422E6AD6" />
+    <Document FullPath="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.Server\Properties\DataSources\PrescriptionContoso.lsml" Checksum="37C02DE6903F85A22D90011318B09F22F9626C7B58ED9F20F65A9B5913A58CE1" />
+    <Document FullPath="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.Server\Properties\Service.lsml" Checksum="EB1CE8FDC0FDC7A7741D71E34A916C05BD335085AAC19D877E101D2239C65311" />
+    <Document FullPath="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.Server\DataSources\ApplicationData\UpcomingAppointments.lsml" Checksum="C6E1F1E2F8572D5BBF545B7ECD00C94311700C0DA020DC2434BE4C28EC8949B8" />
+  </Documents>
+</ModelDocumentManifest>

@@ -1,0 +1,4655 @@
+﻿
+{
+  "modules":
+  [
+    {
+      "id": ":!module",
+      "name": "Microsoft.LightSwitch.MobileWeb",
+      "targetPlatform": "MobileWeb",
+      "globalItems":
+      [
+        {
+          "id": ":RootControl",
+          "name": "RootControl",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Unset",
+          "properties":
+          [
+            {
+              "id": ":RootControl/Properties[BrowseOnly]",
+              "name": "BrowseOnly",
+              "attachedPropertyAvailability": "Default",
+              "isAttachable": true,
+              "isInheritable": true,
+              "propertyType": { "__id": ":Boolean" },
+              "defaultValueSource":
+              {
+                "value": false
+              }
+            },
+            {
+              "id": ":RootControl/Properties[AttachedLabelPosition]",
+              "name": "AttachedLabelPosition",
+              "attachedPropertyAvailability": "Default",
+              "isAttachable": true,
+              "isInheritable": true,
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "Top"
+              }
+            },
+            {
+              "id": ":RootControl/Properties[HorizontalAlignment]",
+              "name": "HorizontalAlignment",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "Left"
+              }
+            },
+            {
+              "id": ":RootControl/Properties[WidthSizingMode]",
+              "name": "WidthSizingMode",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "StretchToContainer"
+              }
+            },
+            {
+              "id": ":RootControl/Properties[HeightSizingMode]",
+              "name": "HeightSizingMode",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "FitToContent"
+              }
+            },
+            {
+              "id": ":RootControl/Properties[Width]",
+              "name": "Width",
+              "propertyType": { "__id": ":Double" },
+              "defaultValueSource":
+              {
+                "value": -1
+              }
+            },
+            {
+              "id": ":RootControl/Properties[Height]",
+              "name": "Height",
+              "propertyType": { "__id": ":Double" },
+              "defaultValueSource":
+              {
+                "value": -1
+              }
+            },
+            {
+              "id": ":RootControl/Properties[MinWidth]",
+              "name": "MinWidth",
+              "propertyType": { "__id": ":Double" },
+              "defaultValueSource":
+              {
+                "value": 0
+              }
+            },
+            {
+              "id": ":RootControl/Properties[MaxWidth]",
+              "name": "MaxWidth",
+              "propertyType": { "__id": ":Double" },
+              "defaultValueSource":
+              {
+                "value": -1
+              }
+            },
+            {
+              "id": ":RootControl/Properties[MinHeight]",
+              "name": "MinHeight",
+              "propertyType": { "__id": ":Double" },
+              "defaultValueSource":
+              {
+                "value": 0
+              }
+            },
+            {
+              "id": ":RootControl/Properties[MaxHeight]",
+              "name": "MaxHeight",
+              "propertyType": { "__id": ":Double" },
+              "defaultValueSource":
+              {
+                "value": -1
+              }
+            },
+            {
+              "id": ":RootControl/Properties[FontStyle]",
+              "name": "FontStyle",
+              "attachedPropertyAvailability": "Default",
+              "isAttachable": true,
+              "isInheritable": true,
+              "isReadOnly": true,
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "Normal"
+              }
+            },
+            {
+              "id": ":RootControl/Properties[TextAlignment]",
+              "name": "TextAlignment",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "Left"
+              }
+            },
+            {
+              "id": ":RootControl/Properties[Tap]",
+              "name": "Tap",
+              "isAction": true
+            }
+          ]
+        },
+        {
+          "id": ":RootValueControl",
+          "name": "RootValueControl",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Unset",
+          "baseControl": { "__id": ":RootControl" },
+          "properties":
+          [
+            {
+              "id": ":RootValueControl/Properties[PlaceholderText]",
+              "name": "PlaceholderText",
+              "attachedPropertyAvailability": "Default",
+              "isAttachable": true,
+              "isInheritable": true,
+              "propertyType": { "__id": ":String" }
+            }
+          ]
+        },
+        {
+          "id": ":RootReadOnlyValueControl",
+          "name": "RootReadOnlyValueControl",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Unset",
+          "baseControl": { "__id": ":RootControl" },
+          "propertyOverrides":
+          [
+            {
+              "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+              "defaultValueSource":
+              {
+                "value": "FitToContent"
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[MinWidth]" },
+              "defaultValueSource":
+              {
+                "value": 30
+              }
+            }
+          ]
+        },
+        {
+          "id": ":NoControl",
+          "name": "NoControl",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "isViewer": true,
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootValueControl" }
+        },
+        {
+          "id": ":FlipSwitchControl",
+          "name": "FlipSwitchControl",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootValueControl" },
+          "properties":
+          [
+            {
+              "id": ":FlipSwitchControl/Properties[Options]",
+              "name": "Options",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "YesNoOption"
+              }
+            }
+          ],
+          "propertyOverrides":
+          [
+            {
+              "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+              "defaultValueSource":
+              {
+                "value": "FitToContent"
+              }
+            }
+          ]
+        },
+        {
+          "id": ":DateTimePicker",
+          "name": "DateTimePicker",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootValueControl" },
+          "properties":
+          [
+            {
+              "id": ":DateTimePicker/Properties[MinimumYear]",
+              "name": "MinimumYear",
+              "propertyType": { "__id": ":Int32" },
+              "defaultValueSource":
+              {
+                "value": 1930
+              }
+            },
+            {
+              "id": ":DateTimePicker/Properties[MaximumYear]",
+              "name": "MaximumYear",
+              "propertyType": { "__id": ":Int32" },
+              "defaultValueSource":
+              {
+                "value": 2030
+              }
+            },
+            {
+              "id": ":DateTimePicker/Properties[Clock]",
+              "name": "Clock",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "TwelveHour"
+              }
+            },
+            {
+              "id": ":DateTimePicker/Properties[MinuteIncrement]",
+              "name": "MinuteIncrement",
+              "propertyType": { "__id": ":Int32" },
+              "defaultValueSource":
+              {
+                "value": 5
+              }
+            },
+            {
+              "id": ":DateTimePicker/Properties[DatePickerEnabled]",
+              "name": "DatePickerEnabled",
+              "propertyType": { "__id": ":Boolean" },
+              "defaultValueSource":
+              {
+                "value": true
+              }
+            },
+            {
+              "id": ":DateTimePicker/Properties[TimePickerEnabled]",
+              "name": "TimePickerEnabled",
+              "propertyType": { "__id": ":Boolean" },
+              "defaultValueSource":
+              {
+                "value": true
+              }
+            }
+          ],
+          "propertyOverrides":
+          [
+            {
+              "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+              "defaultValueSource":
+              {
+                "value": "FitToContent"
+              }
+            }
+          ]
+        },
+        {
+          "id": ":DatePicker",
+          "name": "DatePicker",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootValueControl" },
+          "properties":
+          [
+            {
+              "id": ":DatePicker/Properties[MinimumYear]",
+              "name": "MinimumYear",
+              "propertyType": { "__id": ":Int32" },
+              "defaultValueSource":
+              {
+                "value": 1930
+              }
+            },
+            {
+              "id": ":DatePicker/Properties[MaximumYear]",
+              "name": "MaximumYear",
+              "propertyType": { "__id": ":Int32" },
+              "defaultValueSource":
+              {
+                "value": 2030
+              }
+            }
+          ],
+          "propertyOverrides":
+          [
+            {
+              "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+              "defaultValueSource":
+              {
+                "value": "FitToContent"
+              }
+            }
+          ]
+        },
+        {
+          "id": ":TextBox",
+          "name": "TextBox",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootValueControl" }
+        },
+        {
+          "id": ":EmailAddressEditor",
+          "name": "EmailAddressEditor",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootValueControl" }
+        },
+        {
+          "id": ":PercentEditor",
+          "name": "PercentEditor",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootValueControl" }
+        },
+        {
+          "id": ":MoneyEditor",
+          "name": "MoneyEditor",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootValueControl" }
+        },
+        {
+          "id": ":PhoneNumberEditor",
+          "name": "PhoneNumberEditor",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootValueControl" }
+        },
+        {
+          "id": ":WebAddressEditor",
+          "name": "WebAddressEditor",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootValueControl" }
+        },
+        {
+          "id": ":EmailAddressViewer",
+          "name": "EmailAddressViewer",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "isViewer": true,
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootReadOnlyValueControl" }
+        },
+        {
+          "id": ":PercentViewer",
+          "name": "PercentViewer",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "isViewer": true,
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootReadOnlyValueControl" }
+        },
+        {
+          "id": ":MoneyViewer",
+          "name": "MoneyViewer",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "isViewer": true,
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootReadOnlyValueControl" }
+        },
+        {
+          "id": ":PhoneNumberViewer",
+          "name": "PhoneNumberViewer",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "isViewer": true,
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootReadOnlyValueControl" }
+        },
+        {
+          "id": ":WebAddressViewer",
+          "name": "WebAddressViewer",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "isViewer": true,
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootReadOnlyValueControl" }
+        },
+        {
+          "id": ":Image",
+          "name": "Image",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "isViewer": true,
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootReadOnlyValueControl" },
+          "properties":
+          [
+            {
+              "id": ":Image/Properties[Scale]",
+              "name": "Scale",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "Fill"
+              }
+            }
+          ],
+          "propertyOverrides":
+          [
+            {
+              "property": { "__id": ":RootControl/Properties[HeightSizingMode]" },
+              "defaultValueSource":
+              {
+                "value": "FixedSize"
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+              "defaultValueSource":
+              {
+                "value": "FixedSize"
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[Width]" },
+              "defaultValueSource":
+              {
+                "value": 60
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[Height]" },
+              "defaultValueSource":
+              {
+                "value": 60
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[MinWidth]" },
+              "defaultValueSource":
+              {
+                "value": 12
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[MinHeight]" },
+              "defaultValueSource":
+              {
+                "value": 12
+              }
+            }
+          ]
+        },
+        {
+          "id": ":TextArea",
+          "name": "TextArea",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootValueControl" },
+          "propertyOverrides":
+          [
+            {
+              "property": { "__id": ":RootControl/Properties[HeightSizingMode]" },
+              "defaultValueSource":
+              {
+                "value": "FixedSize"
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[Height]" },
+              "defaultValueSource":
+              {
+                "value": 100
+              }
+            }
+          ]
+        },
+        {
+          "id": ":Paragraph",
+          "name": "Paragraph",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "isViewer": true,
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootReadOnlyValueControl" }
+        },
+        {
+          "id": ":Text",
+          "name": "Text",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "isViewer": true,
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootReadOnlyValueControl" }
+        },
+        {
+          "id": ":ValueDropdown",
+          "name": "ValueDropdown",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "isPicker": true,
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootValueControl" }
+        },
+        {
+          "id": ":RootDetailsControl",
+          "name": "RootDetailsControl",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Unset",
+          "baseControl": { "__id": ":RootControl" }
+        },
+        {
+          "id": ":Summary",
+          "name": "Summary",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "isViewer": true,
+          "supportedContentItemKind": "Details",
+          "baseControl": { "__id": ":RootDetailsControl" },
+          "propertyOverrides":
+          [
+            {
+              "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+              "defaultValueSource":
+              {
+                "value": "FitToContent"
+              }
+            }
+          ]
+        },
+        {
+          "id": ":DetailsModalPicker",
+          "name": "DetailsModalPicker",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "isPicker": true,
+          "supportedContentItemKind": "Details",
+          "baseControl": { "__id": ":RootDetailsControl" },
+          "childItemPropertySources":
+          [
+            {
+              "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+              "source":
+              {
+                "value": true
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[AttachedLabelPosition]" },
+              "source":
+              {
+                "value": "None"
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[MinWidth]" },
+              "source":
+              {
+                "value": 0
+              }
+            },
+            {
+              "property": { "__id": ":RootGroup/Properties[CompactMargins]" },
+              "source":
+              {
+                "value": true
+              }
+            }
+          ]
+        },
+        {
+          "id": ":RootCollectionControl",
+          "name": "RootCollectionControl",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Unset",
+          "baseControl": { "__id": ":RootControl" },
+          "properties":
+          [
+            {
+              "id": ":RootCollectionControl/Properties[ItemTap]",
+              "name": "ItemTap",
+              "isAction": true
+            },
+            {
+              "id": ":RootCollectionControl/Properties[ShowHeader]",
+              "name": "ShowHeader",
+              "propertyType": { "__id": ":Boolean" },
+              "defaultValueSource":
+              {
+                "value": false
+              }
+            }
+          ]
+        },
+        {
+          "id": ":List",
+          "name": "List",
+          "attachedLabelSupport": "DisplayedByControl",
+          "isViewer": true,
+          "supportedContentItemKind": "Collection",
+          "baseControl": { "__id": ":RootCollectionControl" },
+          "childItemPropertySources":
+          [
+            {
+              "property": { "__id": ":RootGroup/Properties[CompactMargins]" },
+              "source":
+              {
+                "value": true
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+              "source":
+              {
+                "value": true
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[AttachedLabelPosition]" },
+              "source":
+              {
+                "value": "None"
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[HeightSizingMode]" },
+              "source":
+              {
+                "value": "FitToContent"
+              }
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": ":List/Properties[ShowArrows]",
+              "name": "ShowArrows",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "Auto"
+              }
+            }
+          ]
+        },
+        {
+          "id": ":Table",
+          "name": "Table",
+          "attachedLabelSupport": "DisplayedByControl",
+          "supportedContentItemKind": "Collection",
+          "baseControl": { "__id": ":RootCollectionControl" },
+          "childView": { "__id": ":TableRowLayout" },
+          "childItemPropertySources":
+          [
+            {
+              "property": { "__id": ":RootGroup/Properties[CompactMargins]" },
+              "source":
+              {
+                "value": false
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+              "source":
+              {
+                "value": true
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[AttachedLabelPosition]" },
+              "source":
+              {
+                "value": "None"
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[HeightSizingMode]" },
+              "source":
+              {
+                "value": "FitToContent"
+              }
+            }
+          ]
+        },
+        {
+          "id": ":TileList",
+          "name": "TileList",
+          "attachedLabelSupport": "DisplayedByControl",
+          "isViewer": true,
+          "supportedContentItemKind": "Collection",
+          "baseControl": { "__id": ":RootCollectionControl" },
+          "childItemPropertySources":
+          [
+            {
+              "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+              "source":
+              {
+                "value": true
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[AttachedLabelPosition]" },
+              "source":
+              {
+                "value": "None"
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[HeightSizingMode]" },
+              "source":
+              {
+                "value": "FitToContent"
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+              "source":
+              {
+                "value": "FixedSize"
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[Width]" },
+              "source":
+              {
+                "value": 235
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[Height]" },
+              "source":
+              {
+                "value": 150
+              }
+            },
+            {
+              "property": { "__id": ":RootGroup/Properties[CompactMargins]" },
+              "source":
+              {
+                "value": true
+              }
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": ":TileList/Properties[IsDynamicTile]",
+              "name": "IsDynamicTile",
+              "attachedPropertyAvailability": "ImmediateChildren",
+              "isAttachable": true,
+              "isInheritable": true,
+              "propertyType": { "__id": ":Boolean" },
+              "defaultValueSource":
+              {
+                "value": true
+              }
+            }
+          ]
+        },
+        {
+          "id": ":Screen",
+          "name": "Screen",
+          "attachedLabelSupport": "DisplayedByControl",
+          "supportedContentItemKind": "Screen",
+          "baseControl": { "__id": ":RootControl" },
+          "properties":
+          [
+            {
+              "id": ":Screen/Properties[ShowAsDialog]",
+              "name": "ShowAsDialog",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Boolean" },
+              "defaultValueSource":
+              {
+                "value": false
+              }
+            },
+            {
+              "id": ":Screen/Properties[HideTabTitles]",
+              "name": "HideTabTitles",
+              "propertyType": { "__id": ":Boolean" },
+              "defaultValueSource":
+              {
+                "value": false
+              }
+            },
+            {
+              "id": ":Screen/Properties[ScreenType]",
+              "name": "ScreenType",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "Browse"
+              }
+            },
+            {
+              "id": ":Screen/Properties[ShowSaveButton]",
+              "name": "ShowSaveButton",
+              "propertyType": { "__id": ":String" }
+            }
+          ]
+        },
+        {
+          "id": ":Pages",
+          "name": "Pages",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Group",
+          "baseControl": { "__id": ":RootControl" }
+        },
+        {
+          "id": ":TabPages",
+          "name": "TabPages",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Group",
+          "baseControl": { "__id": ":Pages" }
+        },
+        {
+          "id": ":DialogPages",
+          "name": "DialogPages",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Group",
+          "baseControl": { "__id": ":Pages" },
+          "childItemPropertySources":
+          [
+            {
+              "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+              "source":
+              {
+                "value": "FitToContent"
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[HeightSizingMode]" },
+              "source":
+              {
+                "value": "FitToContent"
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[MinWidth]" },
+              "source":
+              {
+                "value": 200
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+              "source":
+              {
+                "value": 400
+              }
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": ":DialogPages/Properties[DialogType]",
+              "name": "DialogType",
+              "attachedPropertyAvailability": "ImmediateChildren",
+              "isAttachable": true,
+              "propertyType": { "__id": ":String" }
+            }
+          ]
+        },
+        {
+          "id": ":RootGroup",
+          "name": "RootGroup",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Unset",
+          "baseControl": { "__id": ":RootControl" },
+          "properties":
+          [
+            {
+              "id": ":RootGroup/Properties[CompactMargins]",
+              "name": "CompactMargins",
+              "attachedPropertyAvailability": "Default",
+              "isAttachable": true,
+              "isInheritable": true,
+              "propertyType": { "__id": ":Boolean" },
+              "defaultValueSource":
+              {
+                "value": false
+              }
+            }
+          ]
+        },
+        {
+          "id": ":RowsLayout",
+          "name": "RowsLayout",
+          "attachedLabelSupport": "DisplayedByControl",
+          "supportedContentItemKind": "Group",
+          "baseControl": { "__id": ":RootGroup" },
+          "properties":
+          [
+            {
+              "id": ":RowsLayout/Properties[WeightedRowHeight]",
+              "name": "WeightedRowHeight",
+              "attachedPropertyAvailability": "ImmediateChildren",
+              "isAttachable": true,
+              "propertyType": { "__id": ":Double" },
+              "defaultValueSource":
+              {
+                "value": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": ":ColumnsLayout",
+          "name": "ColumnsLayout",
+          "attachedLabelSupport": "DisplayedByControl",
+          "supportedContentItemKind": "Group",
+          "baseControl": { "__id": ":RootGroup" },
+          "properties":
+          [
+            {
+              "id": ":ColumnsLayout/Properties[WeightedColumnWidth]",
+              "name": "WeightedColumnWidth",
+              "attachedPropertyAvailability": "ImmediateChildren",
+              "isAttachable": true,
+              "propertyType": { "__id": ":Double" },
+              "defaultValueSource":
+              {
+                "value": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": ":TableRowLayout",
+          "name": "TableRowLayout",
+          "attachedLabelSupport": "DisplayedByControl",
+          "supportedContentItemKind": "Group",
+          "baseControl": { "__id": ":ColumnsLayout" },
+          "childItemPropertySources":
+          [
+            {
+              "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+              "source":
+              {
+                "value": "StretchToContainer"
+              }
+            }
+          ]
+        },
+        {
+          "id": ":RootCommand",
+          "name": "RootCommand",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Unset",
+          "baseControl": { "__id": ":RootControl" },
+          "properties":
+          [
+            {
+              "id": ":RootCommand/Properties[HiddenIfDisabled]",
+              "name": "HiddenIfDisabled",
+              "propertyType": { "__id": ":Boolean" },
+              "defaultValueSource":
+              {
+                "value": false
+              }
+            },
+            {
+              "id": ":RootCommand/Properties[Icon]",
+              "name": "Icon",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "msls-star"
+              }
+            }
+          ]
+        },
+        {
+          "id": ":Button",
+          "name": "Button",
+          "attachedLabelSupport": "DisplayedByControl",
+          "supportedContentItemKind": "Command",
+          "baseControl": { "__id": ":RootCommand" },
+          "defaultAction": { "__id": ":RootControl/Properties[Tap]" },
+          "propertyOverrides":
+          [
+            {
+              "isReadOnly": true,
+              "property": { "__id": ":RootControl/Properties[AttachedLabelPosition]" },
+              "defaultValueSource":
+              {
+                "value": "None"
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+              "defaultValueSource":
+              {
+                "value": "FitToContent"
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[MinWidth]" },
+              "defaultValueSource":
+              {
+                "value": 90
+              }
+            }
+          ]
+        },
+        {
+          "id": ":CommandBarButton",
+          "name": "CommandBarButton",
+          "attachedLabelSupport": "DisplayedByControl",
+          "supportedContentItemKind": "Command",
+          "baseControl": { "__id": ":RootCommand" },
+          "defaultAction": { "__id": ":RootControl/Properties[Tap]" },
+          "propertyOverrides":
+          [
+            {
+              "property": { "__id": ":RootCommand/Properties[HiddenIfDisabled]" },
+              "defaultValueSource":
+              {
+                "value": true
+              }
+            },
+            {
+              "isReadOnly": true,
+              "property": { "__id": ":RootControl/Properties[AttachedLabelPosition]" },
+              "defaultValueSource":
+              {
+                "value": "None"
+              }
+            },
+            {
+              "isReadOnly": true,
+              "property": { "__id": ":RootControl/Properties[HeightSizingMode]" },
+              "defaultValueSource":
+              {
+                "value": "FitToContent"
+              }
+            },
+            {
+              "isReadOnly": true,
+              "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+              "defaultValueSource":
+              {
+                "value": "FitToContent"
+              }
+            }
+          ]
+        },
+        {
+          "id": ":RootCustomControl",
+          "name": "RootCustomControl",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Unset",
+          "baseControl": { "__id": ":RootControl" },
+          "properties":
+          [
+            {
+              "id": ":RootCustomControl/Properties[DisabledRendering]",
+              "name": "DisabledRendering",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "Automatic"
+              }
+            },
+            {
+              "id": ":RootCustomControl/Properties[ReadOnlyRendering]",
+              "name": "ReadOnlyRendering",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "Automatic"
+              }
+            },
+            {
+              "id": ":RootCustomControl/Properties[ValidationRendering]",
+              "name": "ValidationRendering",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "Automatic"
+              }
+            }
+          ]
+        },
+        {
+          "id": ":ValueCustomControl",
+          "name": "ValueCustomControl",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootCustomControl" },
+          "propertyOverrides":
+          [
+            {
+              "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+              "defaultValueSource":
+              {
+                "value": "FitToContent"
+              }
+            }
+          ]
+        },
+        {
+          "id": ":GroupCustomControl",
+          "name": "GroupCustomControl",
+          "attachedLabelSupport": "DisplayedByControl",
+          "supportedContentItemKind": "Group",
+          "baseControl": { "__id": ":RootCustomControl" }
+        },
+        {
+          "id": ":CollectionCustomControl",
+          "name": "CollectionCustomControl",
+          "attachedLabelSupport": "DisplayedByControl",
+          "supportedContentItemKind": "Collection",
+          "baseControl": { "__id": ":RootCustomControl" }
+        },
+        {
+          "id": ":ScreenCustomControl",
+          "name": "ScreenCustomControl",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "ScreenContent",
+          "baseControl": { "__id": ":RootCustomControl" }
+        },
+        {
+          "id": ":HTMLShell",
+          "name": "HTMLShell"
+        },
+        {
+          "id": ":HTMLTheme",
+          "name": "HTMLTheme"
+        }
+      ]
+    },
+    {
+      "id": ":!module",
+      "name": "Microsoft.LightSwitch",
+      "globalItems":
+      [
+        {
+          "__isPrimitiveType": 1,
+          "id": ":Binary",
+          "name": "Binary",
+          "jSType": "String",
+          "properties":
+          [
+            {
+              "id": ":Binary/Properties[Size]",
+              "name": "Size",
+              "propertyType": { "__id": ":Int32" }
+            }
+          ]
+        },
+        {
+          "__isPrimitiveType": 1,
+          "id": ":Boolean",
+          "name": "Boolean",
+          "jSType": "Boolean"
+        },
+        {
+          "__isPrimitiveType": 1,
+          "id": ":Byte",
+          "name": "Byte",
+          "jSType": "Number"
+        },
+        {
+          "__isPrimitiveType": 1,
+          "id": ":DateTime",
+          "name": "DateTime",
+          "jSType": "Date",
+          "methods":
+          [
+            {
+              "id": ":DateTime/Methods[AddDays]",
+              "name": "AddDays",
+              "returnType": { "__id": ":DateTime" },
+              "parameters":
+              [
+                {
+                  "id": ":DateTime/Methods[AddDays]/Parameters[Value]",
+                  "name": "Value",
+                  "parameterType": { "__id": ":Int32" }
+                }
+              ]
+            },
+            {
+              "id": ":DateTime/Methods[AddHours]",
+              "name": "AddHours",
+              "returnType": { "__id": ":DateTime" },
+              "parameters":
+              [
+                {
+                  "id": ":DateTime/Methods[AddHours]/Parameters[Value]",
+                  "name": "Value",
+                  "parameterType": { "__id": ":Int32" }
+                }
+              ]
+            },
+            {
+              "id": ":DateTime/Methods[AddMilliSeconds]",
+              "name": "AddMilliSeconds",
+              "returnType": { "__id": ":DateTime" },
+              "parameters":
+              [
+                {
+                  "id": ":DateTime/Methods[AddMilliSeconds]/Parameters[Value]",
+                  "name": "Value",
+                  "parameterType": { "__id": ":Int32" }
+                }
+              ]
+            },
+            {
+              "id": ":DateTime/Methods[AddMinutes]",
+              "name": "AddMinutes",
+              "returnType": { "__id": ":DateTime" },
+              "parameters":
+              [
+                {
+                  "id": ":DateTime/Methods[AddMinutes]/Parameters[Value]",
+                  "name": "Value",
+                  "parameterType": { "__id": ":Int32" }
+                }
+              ]
+            },
+            {
+              "id": ":DateTime/Methods[AddMonths]",
+              "name": "AddMonths",
+              "returnType": { "__id": ":DateTime" },
+              "parameters":
+              [
+                {
+                  "id": ":DateTime/Methods[AddMonths]/Parameters[Value]",
+                  "name": "Value",
+                  "parameterType": { "__id": ":Int32" }
+                }
+              ]
+            },
+            {
+              "id": ":DateTime/Methods[AddSeconds]",
+              "name": "AddSeconds",
+              "returnType": { "__id": ":DateTime" },
+              "parameters":
+              [
+                {
+                  "id": ":DateTime/Methods[AddSeconds]/Parameters[Value]",
+                  "name": "Value",
+                  "parameterType": { "__id": ":Int32" }
+                }
+              ]
+            },
+            {
+              "id": ":DateTime/Methods[AddYears]",
+              "name": "AddYears",
+              "returnType": { "__id": ":DateTime" },
+              "parameters":
+              [
+                {
+                  "id": ":DateTime/Methods[AddYears]/Parameters[Value]",
+                  "name": "Value",
+                  "parameterType": { "__id": ":Int32" }
+                }
+              ]
+            },
+            {
+              "id": ":DateTime/Methods[CompareTo]",
+              "name": "CompareTo",
+              "returnType": { "__id": ":Int32" },
+              "parameters":
+              [
+                {
+                  "id": ":DateTime/Methods[CompareTo]/Parameters[Value]",
+                  "name": "Value",
+                  "parameterType": { "__id": ":DateTime" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": ":DateTime/Properties[Date]",
+              "name": "Date",
+              "propertyType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":DateTime/Properties[Day]",
+              "name": "Day",
+              "propertyType": { "__id": ":Int32" }
+            },
+            {
+              "id": ":DateTime/Properties[DayOfYear]",
+              "name": "DayOfYear",
+              "propertyType": { "__id": ":Int32" }
+            },
+            {
+              "id": ":DateTime/Properties[Hour]",
+              "name": "Hour",
+              "propertyType": { "__id": ":Int32" }
+            },
+            {
+              "id": ":DateTime/Properties[Millisecond]",
+              "name": "Millisecond",
+              "propertyType": { "__id": ":Int32" }
+            },
+            {
+              "id": ":DateTime/Properties[Minute]",
+              "name": "Minute",
+              "propertyType": { "__id": ":Int32" }
+            },
+            {
+              "id": ":DateTime/Properties[Month]",
+              "name": "Month",
+              "propertyType": { "__id": ":Int32" }
+            },
+            {
+              "id": ":DateTime/Properties[Second]",
+              "name": "Second",
+              "propertyType": { "__id": ":Int32" }
+            },
+            {
+              "id": ":DateTime/Properties[Year]",
+              "name": "Year",
+              "propertyType": { "__id": ":Int32" }
+            }
+          ]
+        },
+        {
+          "__isPrimitiveType": 1,
+          "id": ":Decimal",
+          "name": "Decimal",
+          "jSType": "String"
+        },
+        {
+          "__isPrimitiveType": 1,
+          "id": ":Double",
+          "name": "Double",
+          "jSType": "Number"
+        },
+        {
+          "__isPrimitiveType": 1,
+          "id": ":Guid",
+          "name": "Guid",
+          "jSType": "String"
+        },
+        {
+          "__isPrimitiveType": 1,
+          "id": ":Int16",
+          "name": "Int16",
+          "jSType": "Number"
+        },
+        {
+          "__isPrimitiveType": 1,
+          "id": ":Int32",
+          "name": "Int32",
+          "jSType": "Number"
+        },
+        {
+          "__isPrimitiveType": 1,
+          "id": ":Int64",
+          "name": "Int64",
+          "jSType": "String"
+        },
+        {
+          "__isPrimitiveType": 1,
+          "id": ":RowVersion",
+          "name": "RowVersion",
+          "jSType": "Array"
+        },
+        {
+          "__isPrimitiveType": 1,
+          "id": ":SByte",
+          "name": "SByte",
+          "jSType": "Number"
+        },
+        {
+          "__isPrimitiveType": 1,
+          "id": ":Single",
+          "name": "Single",
+          "jSType": "Number"
+        },
+        {
+          "__isPrimitiveType": 1,
+          "id": ":String",
+          "name": "String",
+          "jSType": "String",
+          "methods":
+          [
+            {
+              "id": ":String/Methods[IndexOf]",
+              "name": "IndexOf",
+              "returnType": { "__id": ":Int32" },
+              "parameters":
+              [
+                {
+                  "id": ":String/Methods[IndexOf]/Parameters[Value]",
+                  "name": "Value",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": ":String/Methods[LastIndexOf]",
+              "name": "LastIndexOf",
+              "returnType": { "__id": ":Int32" },
+              "parameters":
+              [
+                {
+                  "id": ":String/Methods[LastIndexOf]/Parameters[Value]",
+                  "name": "Value",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": ":String/Methods[Substring]",
+              "name": "Substring",
+              "returnType": { "__id": ":String" },
+              "parameters":
+              [
+                {
+                  "id": ":String/Methods[Substring]/Parameters[StartIndex]",
+                  "name": "StartIndex",
+                  "parameterType": { "__id": ":Int32" }
+                },
+                {
+                  "id": ":String/Methods[Substring]/Parameters[Length]",
+                  "name": "Length",
+                  "parameterType": { "__id": ":Int32" }
+                }
+              ]
+            },
+            {
+              "id": ":String/Methods[Concat]",
+              "name": "Concat",
+              "returnType": { "__id": ":String" },
+              "parameters":
+              [
+                {
+                  "id": ":String/Methods[Concat]/Parameters[Values]",
+                  "name": "Values",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": ":String/Methods[Remove]",
+              "name": "Remove",
+              "returnType": { "__id": ":String" },
+              "parameters":
+              [
+                {
+                  "id": ":String/Methods[Remove]/Parameters[StartIndex]",
+                  "name": "StartIndex",
+                  "parameterType": { "__id": ":Int32" }
+                },
+                {
+                  "id": ":String/Methods[Remove]/Parameters[Count]",
+                  "name": "Count",
+                  "parameterType": { "__id": ":Int32" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": ":String/Properties[Length]",
+              "name": "Length",
+              "propertyType": { "__id": ":Int32" }
+            }
+          ]
+        },
+        {
+          "__isPrimitiveType": 1,
+          "id": ":TimeSpan",
+          "name": "TimeSpan",
+          "jSType": "Object"
+        },
+        {
+          "__isPrimitiveType": 1,
+          "id": ":DateTimeOffset",
+          "name": "DateTimeOffset",
+          "jSType": "Date"
+        },
+        {
+          "id": ":Binary*",
+          "name": "Binary*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Binary" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":Binary?",
+          "name": "Binary?",
+          "underlyingType": { "__id": ":Binary" }
+        },
+        {
+          "id": ":Binary?*",
+          "name": "Binary?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Binary?" }
+        },
+        {
+          "id": ":Boolean*",
+          "name": "Boolean*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Boolean" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":Boolean?",
+          "name": "Boolean?",
+          "underlyingType": { "__id": ":Boolean" }
+        },
+        {
+          "id": ":Boolean?*",
+          "name": "Boolean?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Boolean?" }
+        },
+        {
+          "id": ":Byte*",
+          "name": "Byte*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Byte" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":Byte?",
+          "name": "Byte?",
+          "underlyingType": { "__id": ":Byte" }
+        },
+        {
+          "id": ":Byte?*",
+          "name": "Byte?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Byte?" }
+        },
+        {
+          "id": ":DateTime*",
+          "name": "DateTime*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":DateTime" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":DateTime?",
+          "name": "DateTime?",
+          "underlyingType": { "__id": ":DateTime" }
+        },
+        {
+          "id": ":DateTime?*",
+          "name": "DateTime?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":DateTime?" }
+        },
+        {
+          "id": ":Decimal*",
+          "name": "Decimal*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Decimal" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":Decimal?",
+          "name": "Decimal?",
+          "underlyingType": { "__id": ":Decimal" }
+        },
+        {
+          "id": ":Decimal?*",
+          "name": "Decimal?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Decimal?" }
+        },
+        {
+          "id": ":Double*",
+          "name": "Double*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Double" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":Double?",
+          "name": "Double?",
+          "underlyingType": { "__id": ":Double" }
+        },
+        {
+          "id": ":Double?*",
+          "name": "Double?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Double?" }
+        },
+        {
+          "id": ":Guid*",
+          "name": "Guid*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Guid" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":Guid?",
+          "name": "Guid?",
+          "underlyingType": { "__id": ":Guid" }
+        },
+        {
+          "id": ":Guid?*",
+          "name": "Guid?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Guid?" }
+        },
+        {
+          "id": ":Int16*",
+          "name": "Int16*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Int16" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":Int16?",
+          "name": "Int16?",
+          "underlyingType": { "__id": ":Int16" }
+        },
+        {
+          "id": ":Int16?*",
+          "name": "Int16?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Int16?" }
+        },
+        {
+          "id": ":Int32*",
+          "name": "Int32*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Int32" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":Int32?",
+          "name": "Int32?",
+          "underlyingType": { "__id": ":Int32" }
+        },
+        {
+          "id": ":Int32?*",
+          "name": "Int32?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Int32?" }
+        },
+        {
+          "id": ":Int64*",
+          "name": "Int64*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Int64" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":Int64?",
+          "name": "Int64?",
+          "underlyingType": { "__id": ":Int64" }
+        },
+        {
+          "id": ":Int64?*",
+          "name": "Int64?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Int64?" }
+        },
+        {
+          "id": ":RowVersion*",
+          "name": "RowVersion*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":RowVersion" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":RowVersion?",
+          "name": "RowVersion?",
+          "underlyingType": { "__id": ":RowVersion" }
+        },
+        {
+          "id": ":RowVersion?*",
+          "name": "RowVersion?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":RowVersion?" }
+        },
+        {
+          "id": ":SByte*",
+          "name": "SByte*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":SByte" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":SByte?",
+          "name": "SByte?",
+          "underlyingType": { "__id": ":SByte" }
+        },
+        {
+          "id": ":SByte?*",
+          "name": "SByte?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":SByte?" }
+        },
+        {
+          "id": ":Single*",
+          "name": "Single*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Single" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":Single?",
+          "name": "Single?",
+          "underlyingType": { "__id": ":Single" }
+        },
+        {
+          "id": ":Single?*",
+          "name": "Single?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Single?" }
+        },
+        {
+          "id": ":String*",
+          "name": "String*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":String" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":String?",
+          "name": "String?",
+          "underlyingType": { "__id": ":String" }
+        },
+        {
+          "id": ":String?*",
+          "name": "String?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":String?" }
+        },
+        {
+          "id": ":TimeSpan*",
+          "name": "TimeSpan*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":TimeSpan" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":TimeSpan?",
+          "name": "TimeSpan?",
+          "underlyingType": { "__id": ":TimeSpan" }
+        },
+        {
+          "id": ":TimeSpan?*",
+          "name": "TimeSpan?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":TimeSpan?" }
+        },
+        {
+          "id": ":DateTimeOffset*",
+          "name": "DateTimeOffset*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":DateTimeOffset" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":DateTimeOffset?",
+          "name": "DateTimeOffset?",
+          "underlyingType": { "__id": ":DateTimeOffset" }
+        },
+        {
+          "id": ":DateTimeOffset?*",
+          "name": "DateTimeOffset?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":DateTimeOffset?" }
+        },
+        {
+          "id": ":Date*",
+          "name": "Date*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Date" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":Date?",
+          "name": "Date?",
+          "underlyingType": { "__id": ":Date" }
+        },
+        {
+          "id": ":Date?*",
+          "name": "Date?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Date?" }
+        },
+        {
+          "id": ":Person*",
+          "name": "Person*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Person" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":Person?",
+          "name": "Person?",
+          "underlyingType": { "__id": ":Person" }
+        },
+        {
+          "id": ":Person?*",
+          "name": "Person?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Person?" }
+        },
+        {
+          "id": ":RelativeDates",
+          "name": "RelativeDates",
+          "globalValues":
+          [
+            {
+              "id": ":RelativeDates/GlobalValues[Now]",
+              "name": "Now",
+              "returnType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":RelativeDates/GlobalValues[Today]",
+              "name": "Today",
+              "returnType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":RelativeDates/GlobalValues[EndOfDay]",
+              "name": "EndOfDay",
+              "returnType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":RelativeDates/GlobalValues[StartOfWeek]",
+              "name": "StartOfWeek",
+              "returnType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":RelativeDates/GlobalValues[EndOfWeek]",
+              "name": "EndOfWeek",
+              "returnType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":RelativeDates/GlobalValues[StartOfMonth]",
+              "name": "StartOfMonth",
+              "returnType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":RelativeDates/GlobalValues[EndOfMonth]",
+              "name": "EndOfMonth",
+              "returnType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":RelativeDates/GlobalValues[StartOfQuarter]",
+              "name": "StartOfQuarter",
+              "returnType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":RelativeDates/GlobalValues[EndOfQuarter]",
+              "name": "EndOfQuarter",
+              "returnType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":RelativeDates/GlobalValues[StartOfYear]",
+              "name": "StartOfYear",
+              "returnType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":RelativeDates/GlobalValues[EndOfYear]",
+              "name": "EndOfYear",
+              "returnType": { "__id": ":DateTime" }
+            }
+          ]
+        },
+        {
+          "id": ":RelativeDateTimeOffsetDates",
+          "name": "RelativeDateTimeOffsetDates",
+          "globalValues":
+          [
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[Now]",
+              "name": "Now",
+              "returnType": { "__id": ":DateTimeOffset" }
+            },
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[Today]",
+              "name": "Today",
+              "returnType": { "__id": ":DateTimeOffset" }
+            },
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[EndOfDay]",
+              "name": "EndOfDay",
+              "returnType": { "__id": ":DateTimeOffset" }
+            },
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[StartOfWeek]",
+              "name": "StartOfWeek",
+              "returnType": { "__id": ":DateTimeOffset" }
+            },
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[EndOfWeek]",
+              "name": "EndOfWeek",
+              "returnType": { "__id": ":DateTimeOffset" }
+            },
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[StartOfMonth]",
+              "name": "StartOfMonth",
+              "returnType": { "__id": ":DateTimeOffset" }
+            },
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[EndOfMonth]",
+              "name": "EndOfMonth",
+              "returnType": { "__id": ":DateTimeOffset" }
+            },
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[StartOfQuarter]",
+              "name": "StartOfQuarter",
+              "returnType": { "__id": ":DateTimeOffset" }
+            },
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[EndOfQuarter]",
+              "name": "EndOfQuarter",
+              "returnType": { "__id": ":DateTimeOffset" }
+            },
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[StartOfYear]",
+              "name": "StartOfYear",
+              "returnType": { "__id": ":DateTimeOffset" }
+            },
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[EndOfYear]",
+              "name": "EndOfYear",
+              "returnType": { "__id": ":DateTimeOffset" }
+            }
+          ]
+        },
+        {
+          "id": ":WellKnownPeople",
+          "name": "WellKnownPeople",
+          "globalValues":
+          [
+            {
+              "id": ":WellKnownPeople/GlobalValues[CurrentUser]",
+              "name": "CurrentUser",
+              "returnType": { "__id": ":Person" }
+            },
+            {
+              "id": ":WellKnownPeople/GlobalValues[AnonymousUser]",
+              "name": "AnonymousUser",
+              "returnType": { "__id": ":Person" }
+            }
+          ]
+        },
+        {
+          "__isSemanticType": 1,
+          "id": ":Date",
+          "name": "Date",
+          "underlyingType": { "__id": ":DateTime" }
+        },
+        {
+          "__isSemanticType": 1,
+          "id": ":Person",
+          "name": "Person",
+          "underlyingType": { "__id": ":String" }
+        }
+      ]
+    },
+    {
+      "id": "Microsoft.LightSwitch.Cosmopolitan:!module",
+      "name": "Microsoft.LightSwitch.Cosmopolitan",
+      "globalItems":
+      [
+        {
+          "id": "Microsoft.LightSwitch.Cosmopolitan:CosmopolitanShell",
+          "name": "CosmopolitanShell"
+        },
+        {
+          "id": "Microsoft.LightSwitch.Cosmopolitan:CosmopolitanTheme",
+          "name": "CosmopolitanTheme"
+        }
+      ]
+    },
+    {
+      "id": "Microsoft.LightSwitch.Extensions:!module",
+      "name": "Microsoft.LightSwitch.Extensions",
+      "globalItems":
+      [
+        {
+          "id": "Microsoft.LightSwitch.Extensions:EmailAddress*",
+          "name": "EmailAddress*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:EmailAddress" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:EmailAddress?",
+          "name": "EmailAddress?",
+          "underlyingType": { "__id": "Microsoft.LightSwitch.Extensions:EmailAddress" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:EmailAddress?*",
+          "name": "EmailAddress?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:EmailAddress?" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:Image*",
+          "name": "Image*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:Image" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:Image?",
+          "name": "Image?",
+          "underlyingType": { "__id": "Microsoft.LightSwitch.Extensions:Image" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:Image?*",
+          "name": "Image?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:Image?" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:Money*",
+          "name": "Money*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:Money" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:Money?",
+          "name": "Money?",
+          "underlyingType": { "__id": "Microsoft.LightSwitch.Extensions:Money" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:Money?*",
+          "name": "Money?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:Money?" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:PhoneNumber*",
+          "name": "PhoneNumber*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:PhoneNumber" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:PhoneNumber?",
+          "name": "PhoneNumber?",
+          "underlyingType": { "__id": "Microsoft.LightSwitch.Extensions:PhoneNumber" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:PhoneNumber?*",
+          "name": "PhoneNumber?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:PhoneNumber?" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:Percent*",
+          "name": "Percent*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:Percent" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:Percent?",
+          "name": "Percent?",
+          "underlyingType": { "__id": "Microsoft.LightSwitch.Extensions:Percent" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:Percent?*",
+          "name": "Percent?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:Percent?" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:WebAddress*",
+          "name": "WebAddress*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:WebAddress" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:WebAddress?",
+          "name": "WebAddress?",
+          "underlyingType": { "__id": "Microsoft.LightSwitch.Extensions:WebAddress" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:WebAddress?*",
+          "name": "WebAddress?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:WebAddress?" }
+        },
+        {
+          "__isSemanticType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:EmailAddress",
+          "name": "EmailAddress",
+          "underlyingType": { "__id": ":String" },
+          "Microsoft.LightSwitch.Extensions:@EmailAddressValidation": { "domainRequired": true }
+        },
+        {
+          "__isSemanticType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:Image",
+          "name": "Image",
+          "underlyingType": { "__id": ":Binary" }
+        },
+        {
+          "__isSemanticType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:Money",
+          "name": "Money",
+          "underlyingType": { "__id": ":Decimal" }
+        },
+        {
+          "__isSemanticType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:PhoneNumber",
+          "name": "PhoneNumber",
+          "underlyingType": { "__id": ":String" },
+          "Microsoft.LightSwitch.Extensions:@PhoneNumberValidation": { "formats": "C (AAA) NNN-NNNN;C (AAA) NNNNNNN;CAAANNNNNNN;(AAA) NNN-NNNN;(AAA) NNNNNNN;AAANNNNNNN;NNN-NNNN;NNNNNNN" }
+        },
+        {
+          "__isSemanticType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:Percent",
+          "name": "Percent",
+          "underlyingType": { "__id": ":Decimal" },
+          "Microsoft.LightSwitch.Extensions:@FormatParameter": { "decimalDigits": 2 },
+          ":@DecimalConstraint":
+          {
+            "scale": 9
+          }
+        },
+        {
+          "__isSemanticType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:WebAddress",
+          "name": "WebAddress",
+          "underlyingType": { "__id": ":String" },
+          "Microsoft.LightSwitch.Extensions:@WebAddressValidation": { }
+        }
+      ]
+    },
+    {
+      "homeScreen": { "__id": "BrowsePatients" },
+      "id": "!module",
+      "name": "LightSwitchApplication.Vision_Clinic.HTMLClient",
+      "logo": "/Content/Images/logo.png",
+      "targetPlatform": "MobileWeb",
+      "version": "1.0.0.0",
+      "shell": { "__id": ":HTMLShell" },
+      "theme": { "__id": ":HTMLTheme" },
+      ":@ModuleNamespace": { "namespace": "LightSwitchApplication" },
+      ":@Partial": { "isPrimary": true },
+      ":@HomeScreen": { "value": { "__id": "BrowsePatients" } },
+      "globalItems":
+      [
+        {
+          "id": "DataWorkspace",
+          "name": "DataWorkspace",
+          "members":
+          [
+            {
+              "id": "DataWorkspace/Members[ApplicationData]",
+              "name": "ApplicationData",
+              "entityContainer": { "__id": "ApplicationData" }
+            },
+            {
+              "id": "DataWorkspace/Members[PrescriptionContoso]",
+              "name": "PrescriptionContoso",
+              "entityContainer": { "__id": "PrescriptionContoso" }
+            }
+          ]
+        },
+        {
+          "id": "LightSwitchServiceApplicationGroup",
+          "name": "LightSwitchServiceApplicationGroup"
+        },
+        {
+          "id": "ProductRebate*",
+          "name": "ProductRebate*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "ProductRebate" }
+        },
+        {
+          "id": "CollectionView$ProductRebate",
+          "name": "CollectionView$ProductRebate",
+          "kind": "CollectionView",
+          "elementType": { "__id": "ProductRebate" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$ProductRebate/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "ProductRebate" }
+            },
+            {
+              "id": "CollectionView$ProductRebate/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "ProductRebate" }
+            },
+            {
+              "id": "CollectionView$ProductRebate/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "ProductRebate" }
+            },
+            {
+              "id": "CollectionView$ProductRebate/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$ProductRebate/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$ProductRebate/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$ProductRebate/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$ProductRebate/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$ProductRebate/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "ProductRebate" }
+            }
+          ]
+        },
+        {
+          "id": "Product*",
+          "name": "Product*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Product" }
+        },
+        {
+          "id": "CollectionView$Product",
+          "name": "CollectionView$Product",
+          "kind": "CollectionView",
+          "elementType": { "__id": "Product" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$Product/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "Product" }
+            },
+            {
+              "id": "CollectionView$Product/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "Product" }
+            },
+            {
+              "id": "CollectionView$Product/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "Product" }
+            },
+            {
+              "id": "CollectionView$Product/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$Product/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$Product/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$Product/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$Product/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$Product/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "Product" }
+            }
+          ]
+        },
+        {
+          "id": "Patient*",
+          "name": "Patient*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Patient" }
+        },
+        {
+          "id": "CollectionView$Patient",
+          "name": "CollectionView$Patient",
+          "kind": "CollectionView",
+          "elementType": { "__id": "Patient" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$Patient/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "Patient" }
+            },
+            {
+              "id": "CollectionView$Patient/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "Patient" }
+            },
+            {
+              "id": "CollectionView$Patient/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "Patient" }
+            },
+            {
+              "id": "CollectionView$Patient/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$Patient/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$Patient/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$Patient/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$Patient/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$Patient/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "Patient" }
+            }
+          ]
+        },
+        {
+          "id": "Invoice*",
+          "name": "Invoice*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Invoice" }
+        },
+        {
+          "id": "CollectionView$Invoice",
+          "name": "CollectionView$Invoice",
+          "kind": "CollectionView",
+          "elementType": { "__id": "Invoice" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$Invoice/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "Invoice" }
+            },
+            {
+              "id": "CollectionView$Invoice/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "Invoice" }
+            },
+            {
+              "id": "CollectionView$Invoice/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "Invoice" }
+            },
+            {
+              "id": "CollectionView$Invoice/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$Invoice/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$Invoice/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$Invoice/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$Invoice/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$Invoice/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "Invoice" }
+            }
+          ]
+        },
+        {
+          "id": "InvoiceDetail*",
+          "name": "InvoiceDetail*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "InvoiceDetail" }
+        },
+        {
+          "id": "CollectionView$InvoiceDetail",
+          "name": "CollectionView$InvoiceDetail",
+          "kind": "CollectionView",
+          "elementType": { "__id": "InvoiceDetail" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$InvoiceDetail/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "InvoiceDetail" }
+            },
+            {
+              "id": "CollectionView$InvoiceDetail/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "InvoiceDetail" }
+            },
+            {
+              "id": "CollectionView$InvoiceDetail/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "InvoiceDetail" }
+            },
+            {
+              "id": "CollectionView$InvoiceDetail/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$InvoiceDetail/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$InvoiceDetail/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$InvoiceDetail/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$InvoiceDetail/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$InvoiceDetail/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "InvoiceDetail" }
+            }
+          ]
+        },
+        {
+          "id": "Appointment*",
+          "name": "Appointment*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Appointment" }
+        },
+        {
+          "id": "CollectionView$Appointment",
+          "name": "CollectionView$Appointment",
+          "kind": "CollectionView",
+          "elementType": { "__id": "Appointment" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$Appointment/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "Appointment" }
+            },
+            {
+              "id": "CollectionView$Appointment/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "Appointment" }
+            },
+            {
+              "id": "CollectionView$Appointment/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "Appointment" }
+            },
+            {
+              "id": "CollectionView$Appointment/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$Appointment/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$Appointment/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$Appointment/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$Appointment/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$Appointment/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "Appointment" }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          "id": "Appointment",
+          "name": "Appointment",
+          ":@CreatedModifiedPropertiesEnabled": { },
+          ":@SummaryProperty": { "property": { "__id": "Appointment/Properties[AppointmentTime]" } },
+          "methods":
+          [
+            {
+              "id": "Appointment/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "Appointment/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "Appointment/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "Appointment/Properties[Id]",
+              "name": "Id",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Appointment/Properties[AppointmentTime]",
+              "name": "AppointmentTime",
+              "propertyType": { "__id": ":DateTime" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Appointment/Properties[AppointmentDate]",
+              "name": "AppointmentDate",
+              "propertyType": { "__id": ":Date" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Appointment/Properties[AppointmentType]",
+              "name": "AppointmentType",
+              "propertyType": { "__id": ":Int16" },
+              ":@Required": { },
+              ":@NotSearchable": { },
+              ":@SupportedValue":
+              [
+                {
+                  "displayName": "Annual",
+                  "value": 0
+                },
+                {
+                  "displayName": "Follow-up",
+                  "value": 1
+                },
+                {
+                  "displayName": "Emergency",
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "id": "Appointment/Properties[DoctorNotes]",
+              "name": "DoctorNotes",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 255
+              }
+            },
+            {
+              "id": "Appointment/Properties[Patient]",
+              "name": "Patient",
+              "association": { "__id": "Appointment_Patient" },
+              "elementType": { "__id": "Patient" },
+              "fromEnd": { "__id": "Appointment_Patient/Ends[Appointment]" },
+              "propertyType": { "__id": "Patient" },
+              "toEnd": { "__id": "Appointment_Patient/Ends[Patient]" }
+            },
+            {
+              "id": "Appointment/Properties[CreatedBy]",
+              "name": "CreatedBy",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Person?" },
+              ":@NotSearchable": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              }
+            },
+            {
+              "id": "Appointment/Properties[Created]",
+              "name": "Created",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":DateTimeOffset?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Appointment/Properties[ModifiedBy]",
+              "name": "ModifiedBy",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Person?" },
+              ":@NotSearchable": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              }
+            },
+            {
+              "id": "Appointment/Properties[Modified]",
+              "name": "Modified",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":DateTimeOffset?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Appointment/Properties[RowVersion]",
+              "name": "RowVersion",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":RowVersion" },
+              ":@Hidden": { },
+              ":@UseForConcurrency": { },
+              ":@NotSearchable": { }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "InvoiceDetail/Properties[Id]" } },
+          "id": "InvoiceDetail",
+          "name": "InvoiceDetail",
+          ":@CreatedModifiedPropertiesEnabled": { },
+          "methods":
+          [
+            {
+              "id": "InvoiceDetail/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "InvoiceDetail/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "InvoiceDetail/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "InvoiceDetail/Properties[Id]",
+              "name": "Id",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "InvoiceDetail/Properties[Quantity]",
+              "name": "Quantity",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "InvoiceDetail/Properties[UnitPrice]",
+              "name": "UnitPrice",
+              "propertyType": { "__id": "Microsoft.LightSwitch.Extensions:Money" },
+              ":@Required": { },
+              ":@NotSearchable": { },
+              ":@DecimalConstraint":
+              {
+                "precision": 18,
+                "scale": 2
+              },
+              "Microsoft.LightSwitch.Extensions:@MoneyProperties":
+              {
+                "currencySymbol": "$"
+              }
+            },
+            {
+              "id": "InvoiceDetail/Properties[Invoice]",
+              "name": "Invoice",
+              "association": { "__id": "Invoice_InvoiceDetail" },
+              "elementType": { "__id": "Invoice" },
+              "fromEnd": { "__id": "Invoice_InvoiceDetail/Ends[InvoiceDetail]" },
+              "propertyType": { "__id": "Invoice" },
+              "toEnd": { "__id": "Invoice_InvoiceDetail/Ends[Invoice]" }
+            },
+            {
+              "id": "InvoiceDetail/Properties[Product]",
+              "name": "Product",
+              "association": { "__id": "InvoiceDetail_Product" },
+              "elementType": { "__id": "Product" },
+              "fromEnd": { "__id": "InvoiceDetail_Product/Ends[InvoiceDetail]" },
+              "propertyType": { "__id": "Product" },
+              "toEnd": { "__id": "InvoiceDetail_Product/Ends[Product]" },
+              "virtualAssociation": { "__id": "InvoiceDetail_Product" }
+            },
+            {
+              "id": "InvoiceDetail/Properties[Product_ProductID]",
+              "name": "Product_ProductID",
+              "propertyType": { "__id": ":Int32" },
+              ":@Hidden": { },
+              ":@Required": { }
+            },
+            {
+              "id": "InvoiceDetail/Properties[CreatedBy]",
+              "name": "CreatedBy",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Person?" },
+              ":@NotSearchable": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              }
+            },
+            {
+              "id": "InvoiceDetail/Properties[Created]",
+              "name": "Created",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":DateTimeOffset?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "InvoiceDetail/Properties[ModifiedBy]",
+              "name": "ModifiedBy",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Person?" },
+              ":@NotSearchable": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              }
+            },
+            {
+              "id": "InvoiceDetail/Properties[Modified]",
+              "name": "Modified",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":DateTimeOffset?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "InvoiceDetail/Properties[RowVersion]",
+              "name": "RowVersion",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":RowVersion" },
+              ":@Hidden": { },
+              ":@UseForConcurrency": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "InvoiceDetail/Properties[SubTotal]",
+              "name": "SubTotal",
+              "propertyType": { "__id": "Microsoft.LightSwitch.Extensions:Money" },
+              "Microsoft.LightSwitch.Extensions:@MoneyProperties":
+              {
+                "currencySymbol": ""
+              },
+              ":@Computed": { }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "Invoice/Properties[Id]" } },
+          "id": "Invoice",
+          "name": "Invoice",
+          ":@CreatedModifiedPropertiesEnabled": { },
+          "methods":
+          [
+            {
+              "id": "Invoice/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "Invoice/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "Invoice/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "Invoice/Properties[Id]",
+              "name": "Id",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Invoice/Properties[InvoiceDate]",
+              "name": "InvoiceDate",
+              "propertyType": { "__id": ":DateTime" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Invoice/Properties[InvoiceDue]",
+              "name": "InvoiceDue",
+              "propertyType": { "__id": ":DateTime" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Invoice/Properties[InvoiceStatus]",
+              "name": "InvoiceStatus",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { },
+              ":@SupportedValue":
+              [
+                {
+                  "displayName": "Active",
+                  "value": 0
+                },
+                {
+                  "displayName": "Paid",
+                  "value": 1
+                },
+                {
+                  "displayName": "Overdue",
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "id": "Invoice/Properties[ShipDate]",
+              "name": "ShipDate",
+              "propertyType": { "__id": ":DateTime" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Invoice/Properties[Patient]",
+              "name": "Patient",
+              "association": { "__id": "Invoice_Patient" },
+              "elementType": { "__id": "Patient" },
+              "fromEnd": { "__id": "Invoice_Patient/Ends[Invoice]" },
+              "propertyType": { "__id": "Patient" },
+              "toEnd": { "__id": "Invoice_Patient/Ends[Patient]" }
+            },
+            {
+              "id": "Invoice/Properties[InvoiceDetails]",
+              "name": "InvoiceDetails",
+              "association": { "__id": "Invoice_InvoiceDetail" },
+              "elementType": { "__id": "InvoiceDetail" },
+              "fromEnd": { "__id": "Invoice_InvoiceDetail/Ends[Invoice]" },
+              "propertyType": { "__id": "InvoiceDetail*" },
+              "toEnd": { "__id": "Invoice_InvoiceDetail/Ends[InvoiceDetail]" }
+            },
+            {
+              "id": "Invoice/Properties[CreatedBy]",
+              "name": "CreatedBy",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Person?" },
+              ":@NotSearchable": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              }
+            },
+            {
+              "id": "Invoice/Properties[Created]",
+              "name": "Created",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":DateTimeOffset?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Invoice/Properties[ModifiedBy]",
+              "name": "ModifiedBy",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Person?" },
+              ":@NotSearchable": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              }
+            },
+            {
+              "id": "Invoice/Properties[Modified]",
+              "name": "Modified",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":DateTimeOffset?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Invoice/Properties[RowVersion]",
+              "name": "RowVersion",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":RowVersion" },
+              ":@Hidden": { },
+              ":@UseForConcurrency": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Invoice/Properties[Tax]",
+              "name": "Tax",
+              "propertyType": { "__id": "Microsoft.LightSwitch.Extensions:Money" },
+              "Microsoft.LightSwitch.Extensions:@MoneyProperties":
+              {
+                "currencySymbol": ""
+              },
+              ":@Computed": { }
+            },
+            {
+              "id": "Invoice/Properties[Total]",
+              "name": "Total",
+              "propertyType": { "__id": "Microsoft.LightSwitch.Extensions:Money" },
+              "Microsoft.LightSwitch.Extensions:@MoneyProperties":
+              {
+                "currencySymbol": ""
+              },
+              ":@Computed": { }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "Patient/Properties[Name]" } },
+          "id": "Patient",
+          "name": "Patient",
+          ":@DefaultScreen":
+          {
+            "value": { "__id": "ViewPatient" },
+            ":@ScreenParameterMapping":
+            {
+              "screenParameter": { "__id": "ViewPatient/Properties[Patient]" }
+            }
+          },
+          "methods":
+          [
+            {
+              "id": "Patient/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "Patient/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "Patient/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "Patient/Properties[Id]",
+              "name": "Id",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Patient/Properties[Name]",
+              "name": "Name",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              }
+            },
+            {
+              "id": "Patient/Properties[Street]",
+              "name": "Street",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              }
+            },
+            {
+              "id": "Patient/Properties[Street2]",
+              "name": "Street2",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 255
+              }
+            },
+            {
+              "id": "Patient/Properties[City]",
+              "name": "City",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              }
+            },
+            {
+              "id": "Patient/Properties[State]",
+              "name": "State",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              }
+            },
+            {
+              "id": "Patient/Properties[Zip]",
+              "name": "Zip",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              }
+            },
+            {
+              "id": "Patient/Properties[PrimaryPhone]",
+              "name": "PrimaryPhone",
+              "propertyType": { "__id": "Microsoft.LightSwitch.Extensions:PhoneNumber?" },
+              ":@MaxLength":
+              {
+                "value": 255
+              }
+            },
+            {
+              "id": "Patient/Properties[SecondaryPhone]",
+              "name": "SecondaryPhone",
+              "propertyType": { "__id": "Microsoft.LightSwitch.Extensions:PhoneNumber?" },
+              ":@MaxLength":
+              {
+                "value": 255
+              }
+            },
+            {
+              "id": "Patient/Properties[Email]",
+              "name": "Email",
+              "propertyType": { "__id": "Microsoft.LightSwitch.Extensions:EmailAddress?" },
+              ":@MaxLength":
+              {
+                "value": 255
+              }
+            },
+            {
+              "id": "Patient/Properties[PolicyNumber]",
+              "name": "PolicyNumber",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 12
+              }
+            },
+            {
+              "id": "Patient/Properties[Invoices]",
+              "name": "Invoices",
+              "association": { "__id": "Invoice_Patient" },
+              "elementType": { "__id": "Invoice" },
+              "fromEnd": { "__id": "Invoice_Patient/Ends[Patient]" },
+              "propertyType": { "__id": "Invoice*" },
+              "toEnd": { "__id": "Invoice_Patient/Ends[Invoice]" }
+            },
+            {
+              "id": "Patient/Properties[Appointments]",
+              "name": "Appointments",
+              "association": { "__id": "Appointment_Patient" },
+              "elementType": { "__id": "Appointment" },
+              "fromEnd": { "__id": "Appointment_Patient/Ends[Patient]" },
+              "propertyType": { "__id": "Appointment*" },
+              "toEnd": { "__id": "Appointment_Patient/Ends[Appointment]" }
+            },
+            {
+              "id": "Patient/Properties[RowVersion]",
+              "name": "RowVersion",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":RowVersion" },
+              ":@Hidden": { },
+              ":@UseForConcurrency": { },
+              ":@NotSearchable": { }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "Product/Properties[ProductName]" } },
+          "id": "Product",
+          "name": "Product",
+          "methods":
+          [
+            {
+              "id": "Product/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "Product/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "Product/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "Product/Properties[ProductID]",
+              "name": "ProductID",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Int32" },
+              ":@Hidden": { },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Product/Properties[ProductName]",
+              "name": "ProductName",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 50
+              }
+            },
+            {
+              "id": "Product/Properties[MSRP]",
+              "name": "MSRP",
+              "propertyType": { "__id": "Microsoft.LightSwitch.Extensions:Money" },
+              ":@Required": { },
+              ":@DecimalConstraint":
+              {
+                "precision": 19,
+                "scale": 4
+              },
+              ":@NotSearchable": { },
+              "Microsoft.LightSwitch.Extensions:@MoneyProperties":
+              {
+                "currencySymbol": "$"
+              }
+            },
+            {
+              "id": "Product/Properties[Description]",
+              "name": "Description",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+              }
+            },
+            {
+              "id": "Product/Properties[ProductImage]",
+              "name": "ProductImage",
+              "propertyType": { "__id": "Microsoft.LightSwitch.Extensions:Image?" },
+              ":@MaxLength":
+              {
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Product/Properties[Category]",
+              "name": "Category",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+              }
+            },
+            {
+              "id": "Product/Properties[ProductRebates]",
+              "name": "ProductRebates",
+              "association": { "__id": "FK_Product_ProductRebate" },
+              "elementType": { "__id": "ProductRebate" },
+              "fromEnd": { "__id": "FK_Product_ProductRebate/Ends[Product]" },
+              "propertyType": { "__id": "ProductRebate*" },
+              "toEnd": { "__id": "FK_Product_ProductRebate/Ends[ProductRebate]" }
+            },
+            {
+              "id": "Product/Properties[InvoiceDetails]",
+              "name": "InvoiceDetails",
+              "association": { "__id": "InvoiceDetail_Product" },
+              "elementType": { "__id": "InvoiceDetail" },
+              "fromEnd": { "__id": "InvoiceDetail_Product/Ends[Product]" },
+              "propertyType": { "__id": "InvoiceDetail*" },
+              "toEnd": { "__id": "InvoiceDetail_Product/Ends[InvoiceDetail]" },
+              "virtualAssociation": { "__id": "InvoiceDetail_Product" }
+            },
+            {
+              "id": "Product/Properties[CurrentPrice]",
+              "name": "CurrentPrice",
+              "isReadOnly": true,
+              "propertyType": { "__id": "Microsoft.LightSwitch.Extensions:Money" },
+              ":@Computed": { },
+              ":@NotSearchable": { },
+              ":@NotSortable": { },
+              "Microsoft.LightSwitch.Extensions:@MoneyProperties":
+              {
+                "currencySymbol": "$"
+              }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "ProductRebate/Properties[ProductRebateID]" } },
+          "id": "ProductRebate",
+          "name": "ProductRebate",
+          "methods":
+          [
+            {
+              "id": "ProductRebate/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "ProductRebate/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "ProductRebate/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "ProductRebate/Properties[ProductRebateID]",
+              "name": "ProductRebateID",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Int32" },
+              ":@Hidden": { },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "ProductRebate/Properties[RebateStart]",
+              "name": "RebateStart",
+              "propertyType": { "__id": ":DateTime?" },
+              ":@DateTimeConstraint":
+              {
+                "kind": "Unspecified",
+                "precision": 0,
+                "preserveSeconds": true
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "ProductRebate/Properties[RebateEnd]",
+              "name": "RebateEnd",
+              "propertyType": { "__id": ":DateTime?" },
+              ":@DateTimeConstraint":
+              {
+                "kind": "Unspecified",
+                "precision": 0,
+                "preserveSeconds": true
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "ProductRebate/Properties[Rebate]",
+              "name": "Rebate",
+              "propertyType": { "__id": "Microsoft.LightSwitch.Extensions:Money?" },
+              ":@DecimalConstraint":
+              {
+                "precision": 19,
+                "scale": 4
+              },
+              ":@NotSearchable": { },
+              "Microsoft.LightSwitch.Extensions:@MoneyProperties":
+              {
+                "currencySymbol": "$"
+              }
+            },
+            {
+              "id": "ProductRebate/Properties[Product]",
+              "name": "Product",
+              "association": { "__id": "FK_Product_ProductRebate" },
+              "elementType": { "__id": "Product" },
+              "fromEnd": { "__id": "FK_Product_ProductRebate/Ends[ProductRebate]" },
+              "propertyType": { "__id": "Product" },
+              "toEnd": { "__id": "FK_Product_ProductRebate/Ends[Product]" }
+            }
+          ]
+        },
+        {
+          "id": "ApplicationData",
+          "name": "ApplicationData",
+          "dataProvider": "EntityFrameworkDataProvider",
+          "isIntrinsic": true,
+          ":@Partial": { "isPrimary": true },
+          "associationSets":
+          [
+            {
+              "id": "ApplicationData/Members[Invoice_InvoiceDetails]",
+              "name": "Invoice_InvoiceDetails",
+              "association": { "__id": "Invoice_InvoiceDetail" },
+              "ends":
+              [
+                {
+                  "properties": [ "Id" ],
+                  "id": "ApplicationData/Members[Invoice_InvoiceDetails]/Members[Invoice]",
+                  "name": "Invoice",
+                  "entitySet": { "__id": "ApplicationData/Members[Invoices]" }
+                },
+                {
+                  "properties": [ "Invoice_InvoiceDetail" ],
+                  "id": "ApplicationData/Members[Invoice_InvoiceDetails]/Members[InvoiceDetail]",
+                  "name": "InvoiceDetail",
+                  "entitySet": { "__id": "ApplicationData/Members[InvoiceDetails]" }
+                }
+              ]
+            },
+            {
+              "id": "ApplicationData/Members[Invoice_Patients]",
+              "name": "Invoice_Patients",
+              "association": { "__id": "Invoice_Patient" },
+              "ends":
+              [
+                {
+                  "properties": [ "Invoice_Patient" ],
+                  "id": "ApplicationData/Members[Invoice_Patients]/Members[Invoice]",
+                  "name": "Invoice",
+                  "entitySet": { "__id": "ApplicationData/Members[Invoices]" }
+                },
+                {
+                  "properties": [ "Id" ],
+                  "id": "ApplicationData/Members[Invoice_Patients]/Members[Patient]",
+                  "name": "Patient",
+                  "entitySet": { "__id": "ApplicationData/Members[Patients]" }
+                }
+              ]
+            },
+            {
+              "id": "ApplicationData/Members[Appointment_Patients]",
+              "name": "Appointment_Patients",
+              "association": { "__id": "Appointment_Patient" },
+              "ends":
+              [
+                {
+                  "properties": [ "Appointment_Patient" ],
+                  "id": "ApplicationData/Members[Appointment_Patients]/Members[Appointment]",
+                  "name": "Appointment",
+                  "entitySet": { "__id": "ApplicationData/Members[Appointments]" }
+                },
+                {
+                  "properties": [ "Id" ],
+                  "id": "ApplicationData/Members[Appointment_Patients]/Members[Patient]",
+                  "name": "Patient",
+                  "entitySet": { "__id": "ApplicationData/Members[Patients]" }
+                }
+              ]
+            }
+          ],
+          "entitySets":
+          [
+            {
+              "id": "ApplicationData/Members[Appointments]",
+              "name": "Appointments",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "Appointment" },
+              "entityType": { "__id": "Appointment" }
+            },
+            {
+              "id": "ApplicationData/Members[InvoiceDetails]",
+              "name": "InvoiceDetails",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "InvoiceDetail" },
+              "entityType": { "__id": "InvoiceDetail" }
+            },
+            {
+              "id": "ApplicationData/Members[Invoices]",
+              "name": "Invoices",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "Invoice" },
+              "entityType": { "__id": "Invoice" }
+            },
+            {
+              "id": "ApplicationData/Members[Patients]",
+              "name": "Patients",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "Patient" },
+              "entityType": { "__id": "Patient" }
+            }
+          ],
+          "queryOperations":
+          [
+            {
+              "id": "ApplicationData/Members[Appointments_Single]",
+              "name": "Appointments_Single",
+              "elementType": { "__id": "Appointment" },
+              "query": { "__id": "ApplicationData/Members[Appointments_Single]" },
+              "returnType": { "__id": "Appointment" },
+              "source":
+              {
+                "member": { "__id": "ApplicationData/Members[Appointments]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "ApplicationData/Members[Appointments_Single]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "ApplicationData/Members[Appointments_SingleOrDefault]",
+              "name": "Appointments_SingleOrDefault",
+              "elementType": { "__id": "Appointment" },
+              "query": { "__id": "ApplicationData/Members[Appointments_SingleOrDefault]" },
+              "returnType": { "__id": "Appointment" },
+              "source":
+              {
+                "member": { "__id": "ApplicationData/Members[Appointments]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "ApplicationData/Members[Appointments_SingleOrDefault]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "ApplicationData/Members[InvoiceDetails_Single]",
+              "name": "InvoiceDetails_Single",
+              "elementType": { "__id": "InvoiceDetail" },
+              "query": { "__id": "ApplicationData/Members[InvoiceDetails_Single]" },
+              "returnType": { "__id": "InvoiceDetail" },
+              "source":
+              {
+                "member": { "__id": "ApplicationData/Members[InvoiceDetails]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "ApplicationData/Members[InvoiceDetails_Single]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "ApplicationData/Members[InvoiceDetails_SingleOrDefault]",
+              "name": "InvoiceDetails_SingleOrDefault",
+              "elementType": { "__id": "InvoiceDetail" },
+              "query": { "__id": "ApplicationData/Members[InvoiceDetails_SingleOrDefault]" },
+              "returnType": { "__id": "InvoiceDetail" },
+              "source":
+              {
+                "member": { "__id": "ApplicationData/Members[InvoiceDetails]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "ApplicationData/Members[InvoiceDetails_SingleOrDefault]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "ApplicationData/Members[Invoices_Single]",
+              "name": "Invoices_Single",
+              "elementType": { "__id": "Invoice" },
+              "query": { "__id": "ApplicationData/Members[Invoices_Single]" },
+              "returnType": { "__id": "Invoice" },
+              "source":
+              {
+                "member": { "__id": "ApplicationData/Members[Invoices]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "ApplicationData/Members[Invoices_Single]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "ApplicationData/Members[Invoices_SingleOrDefault]",
+              "name": "Invoices_SingleOrDefault",
+              "elementType": { "__id": "Invoice" },
+              "query": { "__id": "ApplicationData/Members[Invoices_SingleOrDefault]" },
+              "returnType": { "__id": "Invoice" },
+              "source":
+              {
+                "member": { "__id": "ApplicationData/Members[Invoices]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "ApplicationData/Members[Invoices_SingleOrDefault]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "ApplicationData/Members[Patients_Single]",
+              "name": "Patients_Single",
+              "elementType": { "__id": "Patient" },
+              "query": { "__id": "ApplicationData/Members[Patients_Single]" },
+              "returnType": { "__id": "Patient" },
+              "source":
+              {
+                "member": { "__id": "ApplicationData/Members[Patients]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "ApplicationData/Members[Patients_Single]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "ApplicationData/Members[Patients_SingleOrDefault]",
+              "name": "Patients_SingleOrDefault",
+              "elementType": { "__id": "Patient" },
+              "query": { "__id": "ApplicationData/Members[Patients_SingleOrDefault]" },
+              "returnType": { "__id": "Patient" },
+              "source":
+              {
+                "member": { "__id": "ApplicationData/Members[Patients]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "ApplicationData/Members[Patients_SingleOrDefault]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "ApplicationData/Members[UpcomingAppointments]",
+              "name": "UpcomingAppointments",
+              "elementType": { "__id": "Appointment" },
+              "query": { "__id": "ApplicationData/Members[UpcomingAppointments]" },
+              "returnType": { "__id": "Appointment*" },
+              "source":
+              {
+                "member": { "__id": "ApplicationData/Members[Appointments]" }
+              },
+              "sortCriteria":
+              [
+                {
+                  "member": { "__id": "Appointment/Properties[AppointmentDate]" }
+                },
+                {
+                  "member": { "__id": "Appointment/Properties[AppointmentTime]" }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "PrescriptionContoso",
+          "name": "PrescriptionContoso",
+          "dataProvider": "EntityFrameworkDataProvider",
+          ":@Partial": { "isPrimary": true },
+          "associationSets":
+          [
+            {
+              "id": "PrescriptionContoso/Members[FK_Product_ProductRebate]",
+              "name": "FK_Product_ProductRebate",
+              "association": { "__id": "FK_Product_ProductRebate" },
+              "ends":
+              [
+                {
+                  "properties": [ "ProductID" ],
+                  "id": "PrescriptionContoso/Members[FK_Product_ProductRebate]/Members[Product]",
+                  "name": "Product",
+                  "entitySet": { "__id": "PrescriptionContoso/Members[Products]" }
+                },
+                {
+                  "properties": [ "ProductID" ],
+                  "id": "PrescriptionContoso/Members[FK_Product_ProductRebate]/Members[ProductRebate]",
+                  "name": "ProductRebate",
+                  "entitySet": { "__id": "PrescriptionContoso/Members[ProductRebates]" }
+                }
+              ]
+            }
+          ],
+          "entitySets":
+          [
+            {
+              "id": "PrescriptionContoso/Members[ProductRebates]",
+              "name": "ProductRebates",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "ProductRebate" },
+              "entityType": { "__id": "ProductRebate" }
+            },
+            {
+              "id": "PrescriptionContoso/Members[Products]",
+              "name": "Products",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "Product" },
+              "entityType": { "__id": "Product" }
+            }
+          ],
+          "queryOperations":
+          [
+            {
+              "id": "PrescriptionContoso/Members[ProductRebates_Single]",
+              "name": "ProductRebates_Single",
+              "elementType": { "__id": "ProductRebate" },
+              "query": { "__id": "PrescriptionContoso/Members[ProductRebates_Single]" },
+              "returnType": { "__id": "ProductRebate" },
+              "source":
+              {
+                "member": { "__id": "PrescriptionContoso/Members[ProductRebates]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "PrescriptionContoso/Members[ProductRebates_Single]/Parameters[ProductRebateID]",
+                  "name": "ProductRebateID",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "PrescriptionContoso/Members[ProductRebates_SingleOrDefault]",
+              "name": "ProductRebates_SingleOrDefault",
+              "elementType": { "__id": "ProductRebate" },
+              "query": { "__id": "PrescriptionContoso/Members[ProductRebates_SingleOrDefault]" },
+              "returnType": { "__id": "ProductRebate" },
+              "source":
+              {
+                "member": { "__id": "PrescriptionContoso/Members[ProductRebates]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "PrescriptionContoso/Members[ProductRebates_SingleOrDefault]/Parameters[ProductRebateID]",
+                  "name": "ProductRebateID",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "PrescriptionContoso/Members[Products_Single]",
+              "name": "Products_Single",
+              "elementType": { "__id": "Product" },
+              "query": { "__id": "PrescriptionContoso/Members[Products_Single]" },
+              "returnType": { "__id": "Product" },
+              "source":
+              {
+                "member": { "__id": "PrescriptionContoso/Members[Products]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "PrescriptionContoso/Members[Products_Single]/Parameters[ProductID]",
+                  "name": "ProductID",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "PrescriptionContoso/Members[Products_SingleOrDefault]",
+              "name": "Products_SingleOrDefault",
+              "elementType": { "__id": "Product" },
+              "query": { "__id": "PrescriptionContoso/Members[Products_SingleOrDefault]" },
+              "returnType": { "__id": "Product" },
+              "source":
+              {
+                "member": { "__id": "PrescriptionContoso/Members[Products]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "PrescriptionContoso/Members[Products_SingleOrDefault]/Parameters[ProductID]",
+                  "name": "ProductID",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "PrescriptionContoso/Members[RelatedProducts]",
+              "name": "RelatedProducts",
+              "elementType": { "__id": "Product" },
+              "query": { "__id": "PrescriptionContoso/Members[RelatedProducts]" },
+              "returnType": { "__id": "Product*" },
+              "source":
+              {
+                "member": { "__id": "PrescriptionContoso/Members[Products]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "PrescriptionContoso/Members[RelatedProducts]/Parameters[Category]",
+                  "name": "Category",
+                  "parameterType": { "__id": ":String?" }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Invoice_InvoiceDetail",
+          "name": "Invoice_InvoiceDetail",
+          "ends":
+          [
+            {
+              "id": "Invoice_InvoiceDetail/Ends[Invoice]",
+              "name": "Invoice",
+              "multiplicity": "One",
+              "entityType": { "__id": "Invoice" },
+              ":@DeleteRule": { "action": "Restrict" }
+            },
+            {
+              "id": "Invoice_InvoiceDetail/Ends[InvoiceDetail]",
+              "name": "InvoiceDetail",
+              "multiplicity": "Many",
+              "entityType": { "__id": "InvoiceDetail" }
+            }
+          ]
+        },
+        {
+          "id": "Invoice_Patient",
+          "name": "Invoice_Patient",
+          "ends":
+          [
+            {
+              "id": "Invoice_Patient/Ends[Invoice]",
+              "name": "Invoice",
+              "multiplicity": "Many",
+              "entityType": { "__id": "Invoice" }
+            },
+            {
+              "id": "Invoice_Patient/Ends[Patient]",
+              "name": "Patient",
+              "multiplicity": "One",
+              "entityType": { "__id": "Patient" },
+              ":@DeleteRule": { "action": "Restrict" }
+            }
+          ]
+        },
+        {
+          "id": "Appointment_Patient",
+          "name": "Appointment_Patient",
+          "ends":
+          [
+            {
+              "id": "Appointment_Patient/Ends[Appointment]",
+              "name": "Appointment",
+              "multiplicity": "Many",
+              "entityType": { "__id": "Appointment" }
+            },
+            {
+              "id": "Appointment_Patient/Ends[Patient]",
+              "name": "Patient",
+              "multiplicity": "One",
+              "entityType": { "__id": "Patient" },
+              ":@DeleteRule": { "action": "Restrict" }
+            }
+          ]
+        },
+        {
+          "id": "FK_Product_ProductRebate",
+          "name": "FK_Product_ProductRebate",
+          "ends":
+          [
+            {
+              "id": "FK_Product_ProductRebate/Ends[Product]",
+              "name": "Product",
+              "multiplicity": "One",
+              "entityType": { "__id": "Product" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_Product_ProductRebate/Ends[ProductRebate]",
+              "name": "ProductRebate",
+              "multiplicity": "Many",
+              "entityType": { "__id": "ProductRebate" }
+            }
+          ]
+        },
+        {
+          "id": "InvoiceDetail_Product",
+          "name": "InvoiceDetail_Product",
+          "ends":
+          [
+            {
+              "id": "InvoiceDetail_Product/Ends[InvoiceDetail]",
+              "name": "InvoiceDetail",
+              "multiplicity": "Many",
+              "entityType": { "__id": "InvoiceDetail" }
+            },
+            {
+              "id": "InvoiceDetail_Product/Ends[Product]",
+              "name": "Product",
+              "multiplicity": "One",
+              "entityType": { "__id": "Product" }
+            }
+          ]
+        },
+        {
+          "id": "InvoiceDetail_Product_Set",
+          "name": "InvoiceDetail_Product_Set",
+          "virtualAssociation": { "__id": "InvoiceDetail_Product" },
+          "ends":
+          [
+            {
+              "id": "InvoiceDetail_Product_Set/Members[InvoiceDetail]",
+              "name": "InvoiceDetail",
+              "entityContainer": { "__id": "ApplicationData" },
+              "entitySet": { "__id": "ApplicationData/Members[InvoiceDetails]" },
+              "properties":
+              [
+                {
+                  "entityProperty": { "__id": "InvoiceDetail/Properties[Product_ProductID]" }
+                }
+              ]
+            },
+            {
+              "id": "InvoiceDetail_Product_Set/Members[Product]",
+              "name": "Product",
+              "entityContainer": { "__id": "PrescriptionContoso" },
+              "entitySet": { "__id": "PrescriptionContoso/Members[Products]" },
+              "properties":
+              [
+                {
+                  "entityProperty": { "__id": "Product/Properties[ProductID]" }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "displayName": "Browse Patients",
+          "id": "BrowsePatients",
+          "name": "BrowsePatients",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[ApplicationData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Root Content Item",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Patient List",
+                    "name": "PatientList",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Patients",
+                        "name": "Patients",
+                        "kind": "Collection",
+                        "view": { "__id": ":TileList" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "BrowsePatients/Properties[Patients]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "rows",
+                            "name": "rows",
+                            "kind": "Details",
+                            "view": { "__id": ":RowsLayout" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Name",
+                                "name": "Name",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Patient/Properties[Name]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Large"
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Policy Number",
+                                "name": "PolicyNumber",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Patient/Properties[PolicyNumber]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                "value": "FitToContent"
+                              }
+                            ]
+                          }
+                        ],
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showViewPatient]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowsePatients/Properties[Patients]" } },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showViewPatient]/Parameters[Patient]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "BrowsePatients/Properties[Patients]" }
+                                      },
+                                      {
+                                        "member": { "__id": "CollectionView$Patient/Properties[selectedItem]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Search",
+                        "name": "SearchPatients",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "BrowsePatients/Properties[Patients]" }
+                                },
+                                {
+                                  "target": { "__id": "CollectionView$Patient/Methods[showSearch]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-search"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "BrowsePatients/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "BrowsePatients/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "BrowsePatients/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "BrowsePatients/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "BrowsePatients/Properties[Patients]",
+              "name": "Patients",
+              "pageSize": 45,
+              "elementType": { "__id": "Patient" },
+              "propertyType": { "__id": "CollectionView$Patient" },
+              "query":
+              {
+                "id": "BrowsePatients/Properties[Patients]/Query",
+                "name": "PatientsQuery",
+                "elementType": { "__id": "Patient" },
+                "returnType": { "__id": "Patient*" },
+                "source":
+                {
+                  "member": { "__id": "ApplicationData/Members[Patients]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "BrowsePatients/Properties[Patients]/Query" }
+              }
+            }
+          ]
+        },
+        {
+          "displayName": "View Patient",
+          "id": "ViewPatient",
+          "name": "ViewPatient",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[ApplicationData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Root Content Item",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "columns",
+                        "name": "columns",
+                        "kind": "Details",
+                        "view": { "__id": ":ColumnsLayout" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "ViewPatient/Properties[Patient]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "left",
+                            "name": "left",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Name",
+                                "name": "Name",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Patient/Properties[Name]" }
+                                }
+                              },
+                              {
+                                "displayName": "Street",
+                                "name": "Street",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Patient/Properties[Street]" }
+                                }
+                              },
+                              {
+                                "displayName": "Street2",
+                                "name": "Street2",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Patient/Properties[Street2]" }
+                                }
+                              },
+                              {
+                                "displayName": "City",
+                                "name": "City",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Patient/Properties[City]" }
+                                }
+                              },
+                              {
+                                "displayName": "State",
+                                "name": "State",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Patient/Properties[State]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          },
+                          {
+                            "displayName": "right",
+                            "name": "right",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Zip",
+                                "name": "Zip",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Patient/Properties[Zip]" }
+                                }
+                              },
+                              {
+                                "displayName": "Primary Phone",
+                                "name": "PrimaryPhone",
+                                "kind": "Value",
+                                "view": { "__id": ":PhoneNumberViewer" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Patient/Properties[PrimaryPhone]" }
+                                }
+                              },
+                              {
+                                "displayName": "Secondary Phone",
+                                "name": "SecondaryPhone",
+                                "kind": "Value",
+                                "view": { "__id": ":PhoneNumberViewer" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Patient/Properties[SecondaryPhone]" }
+                                }
+                              },
+                              {
+                                "displayName": "Email",
+                                "name": "Email",
+                                "kind": "Value",
+                                "view": { "__id": ":EmailAddressViewer" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Patient/Properties[Email]" }
+                                }
+                              },
+                              {
+                                "displayName": "Policy Number",
+                                "name": "PolicyNumber",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Patient/Properties[PolicyNumber]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "ViewPatient/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "ViewPatient/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "ViewPatient/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "ViewPatient/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "ViewPatient/Properties[Patient]",
+              "name": "Patient",
+              "elementType": { "__id": "Patient" },
+              "propertyType": { "__id": "Patient" },
+              ":@IsParameter": { }
+            }
+          ]
+        },
+        {
+          "displayName": "Browse Upcoming Appointments",
+          "id": "BrowseUpcomingAppointments",
+          "name": "BrowseUpcomingAppointments",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[ApplicationData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Root Content Item",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Appointment List",
+                    "name": "AppointmentList",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "UpcomingAppointments",
+                        "name": "UpcomingAppointments",
+                        "kind": "Collection",
+                        "view": { "__id": ":List" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "BrowseUpcomingAppointments/Properties[UpcomingAppointments]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "rows",
+                            "name": "rows",
+                            "kind": "Details",
+                            "view": { "__id": ":RowsLayout" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Appointment Time",
+                                "name": "AppointmentTime",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Appointment/Properties[AppointmentTime]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Large"
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Appointment Date",
+                                "name": "AppointmentDate",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Appointment/Properties[AppointmentDate]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Small"
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Appointment Type",
+                                "name": "AppointmentType",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Appointment/Properties[AppointmentType]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Small"
+                                  }
+                                ]
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                "value": "FitToContent"
+                              }
+                            ]
+                          }
+                        ],
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                            "source":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "BrowseUpcomingAppointments/Properties[UpcomingAppointments]" }
+                                },
+                                {
+                                  "target": { "__id": "CollectionView$Appointment/Methods[viewSelected]" }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Search",
+                        "name": "SearchUpcomingAppointments",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "BrowseUpcomingAppointments/Properties[UpcomingAppointments]" }
+                                },
+                                {
+                                  "target": { "__id": "CollectionView$Appointment/Methods[showSearch]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-search"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "BrowseUpcomingAppointments/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "BrowseUpcomingAppointments/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "BrowseUpcomingAppointments/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "BrowseUpcomingAppointments/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "BrowseUpcomingAppointments/Properties[UpcomingAppointments]",
+              "name": "UpcomingAppointments",
+              "pageSize": 45,
+              "elementType": { "__id": "Appointment" },
+              "propertyType": { "__id": "CollectionView$Appointment" },
+              "query":
+              {
+                "id": "BrowseUpcomingAppointments/Properties[UpcomingAppointments]/Query",
+                "name": "UpcomingAppointmentsQuery",
+                "elementType": { "__id": "Appointment" },
+                "returnType": { "__id": "Appointment*" },
+                "source":
+                {
+                  "member": { "__id": "ApplicationData/Members[UpcomingAppointments]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "BrowseUpcomingAppointments/Properties[UpcomingAppointments]/Query" }
+              }
+            }
+          ]
+        }
+      ],
+      "methods":
+      [
+        {
+          "id": "!module/Methods[showBrowsePatients]",
+          "name": "showBrowsePatients",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "BrowsePatients" } }
+        },
+        {
+          "id": "!module/Methods[showViewPatient]",
+          "name": "showViewPatient",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "ViewPatient" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showViewPatient]/Parameters[Patient]",
+              "name": "Patient",
+              "parameterType": { "__id": "Patient" }
+            }
+          ]
+        },
+        {
+          "id": "!module/Methods[showBrowseUpcomingAppointments]",
+          "name": "showBrowseUpcomingAppointments",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "BrowseUpcomingAppointments" } }
+        }
+      ],
+      "navigationItems":
+      [
+        {
+          "id": "!module/NavigationItems[link]",
+          "name": "link",
+          "method": { "__id": "!module/Methods[showBrowsePatients]" }
+        },
+        {
+          "id": "!module/NavigationItems[link1]",
+          "name": "link1",
+          "method": { "__id": "!module/Methods[showBrowseUpcomingAppointments]" }
+        }
+      ]
+    }
+  ]
+}

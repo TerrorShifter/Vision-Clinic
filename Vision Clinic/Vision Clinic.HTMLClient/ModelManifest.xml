@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Documents>
+    <Document FullPath="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.HTMLClient\Properties\Client.lsml" Checksum="7AEF5A22C71D512C7E0DCE486C28388C13CBFFFFFCE2FCE0DCA4844192952B92" />
+    <Document FullPath="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.HTMLClient\Properties\Proxies.lsml" Checksum="93B20C487D11A534BF01BFCF4ACCC5D38CBC8AAAA7C7EA5E2338D7BAEAE193A2" />
+    <Document FullPath="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.HTMLClient\Screens\BrowsePatients.lsml" Checksum="603459DACE0A25C1C9BE7DBD37D6D2CEC8E4D7B54FD56F656311C515072C5D90" />
+    <Document FullPath="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.HTMLClient\Screens\ViewPatient.lsml" Checksum="C37102B3AB2BAF904952CE802E8C463C82BD2F97DE06B6142C961ABD953A4EE6" />
+    <Document FullPath="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.HTMLClient\Properties\ApplicationData\Patients.lsml" Checksum="53497EA0519FCFDA5311F0BD53C258638F8896FDFB2C84E552DCE9F2D4398F1C" />
+    <Document FullPath="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.HTMLClient\Properties\ApplicationData\InvoiceDetails.lsml" Checksum="5BF7B23C41526CF511467AEC75076BD85F83893757C6714FCA90ABA3D0979F5A" />
+    <Document FullPath="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.HTMLClient\Properties\ApplicationData\Invoices.lsml" Checksum="3612BAB542A22A96E2D98FB57230941DE21F828CBE3F12BBAD5FD3836C653A5A" />
+    <Document FullPath="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.HTMLClient\Properties\ApplicationData\Appointments.lsml" Checksum="B79FCBC6483E077AA47001537E681E06854CF727FA3BE63E794748AC2EAB7ED5" />
+    <Document FullPath="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.HTMLClient\Screens\BrowseUpcomingAppointments.lsml" Checksum="DDE35CDEBC7A5FF54957B6839095BC06DF74DC554949DFBBE464353259C49266" />
+  </Documents>
+</ModelDocumentManifest>

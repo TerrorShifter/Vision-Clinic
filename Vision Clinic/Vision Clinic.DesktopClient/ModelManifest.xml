@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Documents>
+    <Document FullPath="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.DesktopClient\Properties\ApplicationData\Appointments.lsml" Checksum="AF27FD3221D479C56F5BC2BE883A9BC6023AB0C2D9440F4F3F28BDEF7E11B15A" />
+    <Document FullPath="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.DesktopClient\Properties\ApplicationData\InvoiceDetails.lsml" Checksum="A38641985187022611E2ABC3EC837A16B6A7561F593C2506F8DDE640C81C8C7C" />
+    <Document FullPath="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.DesktopClient\Properties\ApplicationData\Invoices.lsml" Checksum="24CAFBDF3DE53D2FC16234B8F90E89863276E21E2D9B34A559EFB2B71C410E46" />
+    <Document FullPath="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.DesktopClient\Properties\Client.lsml" Checksum="74A99C9C89EB2115E0AB28B6166EF0CB02B63975FDBDC67DF017D37D0959BC8A" />
+    <Document FullPath="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.DesktopClient\Properties\PrescriptionContoso\Products.lsml" Checksum="DAF2F6BEC9669DE672054CD83F15ECD45FC813C9BEA0DAB68BC34C13F4B6E531" />
+    <Document FullPath="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.DesktopClient\Properties\Proxies.lsml" Checksum="BD707248059B7E16AC2BA7868F3BCFCB020091C09A6B5E481B6FABFBBD385B76" />
+    <Document FullPath="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.DesktopClient\Screens\CreateNewAppointment.lsml" Checksum="CC18486367BCC4B8B3EB703D8A136F1918DE3E0EBBF1522B0132CB1015A2996D" />
+    <Document FullPath="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.DesktopClient\Screens\InvoiceScreen.lsml" Checksum="53EA887C76A27048BA61059BA980B7DC573206938BF65425843B46BA063CF6A5" />
+    <Document FullPath="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.DesktopClient\Screens\PatientList.lsml" Checksum="010E018FD1700A59317071E3DE1C1757964AE5C5A28DFE285277A22335FF0C77" />
+    <Document FullPath="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.DesktopClient\Screens\ProductList.lsml" Checksum="7BB3B1C372065064D84660DAECC1807E9105A2842A9C55F8C02CC88E8CD8D7F6" />
+  </Documents>
+</ModelDocumentManifest>

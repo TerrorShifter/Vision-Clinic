@@ -1,0 +1,11 @@
+Vision Clinic.Server.Properties.Service.lsml
+Vision Clinic.Server.Properties.DataSources.ApplicationData.lsml
+Vision Clinic.Server.DataSources.ApplicationData.Patients.lsml
+Vision Clinic.Server.DataSources.ApplicationData.Invoices.lsml
+Vision Clinic.Server.DataSources.ApplicationData.InvoiceDetails.lsml
+Vision Clinic.Server.DataSources.ApplicationData.Appointments.lsml
+Vision Clinic.Server.DataSources.PrescriptionContoso.Products.lsml
+Vision Clinic.Server.DataSources.PrescriptionContoso.ProductRebates.lsml
+Vision Clinic.Server.Properties.DataSources.PrescriptionContoso.lsml
+Vision Clinic.Server.DataSources.PrescriptionContoso.RelatedProducts.lsml
+Vision Clinic.Server.DataSources.ApplicationData.UpcomingAppointments.lsml

@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <dbFullSql path="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\bin\Release\Vision Clinic.sql" transacted="false" />
+  <IisApp path="E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\bin\Release\app.publish\" />
+</sitemanifest>

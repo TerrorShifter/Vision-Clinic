@@ -1,0 +1,2 @@
+E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.HTMLClient\bin\Release\LSResourceGeneratorsTask.mcs
+E:\Jed\Documents\Visual Studio\Projects\Vision Clinic\Vision Clinic\Vision Clinic.HTMLClient\bin\Release\LSClientCodeGeneratorsTask.mcs

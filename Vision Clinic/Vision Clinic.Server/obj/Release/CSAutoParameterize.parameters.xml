@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="_IntrinsicData-Web.config Connection String" description="_IntrinsicData Connection String used in web.config by the application to access the database." defaultValue="Data Source=|SqlExpressInstanceName|;AttachDbFilename=|ApplicationDatabasePath|;Integrated Security=True;Connect Timeout=30;MultipleActiveResultSets=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\Jed\\Documents\\Visual\ Studio\\Projects\\Vision\ Clinic\\Vision\ Clinic\\bin\\Release\\app\.publish\\Web\.config$" match="/configuration/connectionStrings/add[@name='_IntrinsicData']/@connectionString" />
+  </parameter>
+  <parameter name="72d22e9b-ed90-42ac-9c31-19403cb63fc2-Web.config Connection String" description="72d22e9b-ed90-42ac-9c31-19403cb63fc2 Connection String used in web.config by the application to access the database." defaultValue="Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename=&quot;E:\Jed\Documents\Visual Studio\Data\PrescriptionContoso.mdf&quot;;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\Jed\\Documents\\Visual\ Studio\\Projects\\Vision\ Clinic\\Vision\ Clinic\\bin\\Release\\app\.publish\\Web\.config$" match="/configuration/connectionStrings/add[@name='72d22e9b-ed90-42ac-9c31-19403cb63fc2']/@connectionString" />
+  </parameter>
+</parameters>
